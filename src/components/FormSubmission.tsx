@@ -1,7 +1,6 @@
-import { useState, Fragment } from "react";
+import { Fragment } from "react";
 
-export default function FormSubmission({ setKtpFile }: any) {
-  const [loading, setLoading] = useState(false);
+export default function FormSubmission({ setKtpFile, loading }: any) {
   return (
     <Fragment>
       <div className="mb-6">
