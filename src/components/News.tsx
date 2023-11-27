@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function News() {
   return (
     <section className="bg-white" id="news">
@@ -33,10 +35,10 @@ export default function News() {
               <span className="text-sm">Selasa, 27 Juni 2023</span>
             </div>
             <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-              <a href="#">
+              <Link href="https://jambiprima.com/read/2023/06/27/17040/sekretaris-umum-propas-ahmadi-hasibuan-siap-menangkan-prabowo-subianto-jadi-presiden-2024/">
                 Sekretaris Umum Propas Ahmadi Hasibuan siap menangkan Prabowo
                 Subianto Jadi Presiden 2024
-              </a>
+              </Link>
             </h2>
             <p className="mb-5 font-light text-gray-500">
               Sekretaris Umum Propas Siap Berjuang bersama Letjen TNI Purn
@@ -52,7 +54,7 @@ export default function News() {
                 />
                 <span className="font-medium">Bonnie Green</span>
               </div> */}
-              <a
+              <Link
                 href="https://jambiprima.com/read/2023/06/27/17040/sekretaris-umum-propas-ahmadi-hasibuan-siap-menangkan-prabowo-subianto-jadi-presiden-2024/"
                 target="_blank"
                 className="inline-flex items-center font-medium text-primary-600"
@@ -70,7 +72,7 @@ export default function News() {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </article>
         </div>
