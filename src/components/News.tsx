@@ -3,19 +3,19 @@ import Link from "next/link";
 export default function News() {
   const news = [
     {
+      title: "DPD PROPAS Sumut Siap Menangkan Prabowo – Gibran Satu Putaran",
+      link: "https://orbitdigitaldaily.com/dpd-propas-sumut-siap-menangkan-prabowo-gibran-satu-putaran/",
+      date: "Sabtu, 25 November 2023",
+      content:
+        "Struktur kepengurusan Pro Prabowo Subianto (PROPAS) Indonesia Dewan Pimpinan Daerah (DPD) Provinsi Sumatera Utara terbentuk secara musyawarah dan mufakat. Jimmi Simanjuntak terpilih menjadi pucuk pimpinan DPD Sumut, Jumat (24/11/2023).",
+    },
+    {
       title:
         "Sekretaris Umum Propas Ahmadi Hasibuan siap menangkan Prabowo Subianto Jadi Presiden 2024",
       link: "https://jambiprima.com/read/2023/06/27/17040/sekretaris-umum-propas-ahmadi-hasibuan-siap-menangkan-prabowo-subianto-jadi-presiden-2024/",
       date: "Selasa, 27 Juni 2023",
       content:
         "Sekretaris Umum Propas Siap Berjuang bersama Letjen TNI Purn H.Prabowo Subianto Djoyojadikusuma Demi Indonesia Raya siap memenangkan Prabowo Subianto pada Pemilu 2024.",
-    },
-    {
-      title: "DPD PROPAS Sumut Siap Menangkan Prabowo – Gibran Satu Putaran",
-      link: "https://orbitdigitaldaily.com/dpd-propas-sumut-siap-menangkan-prabowo-gibran-satu-putaran/",
-      date: "Sabtu, 25 November 2023",
-      content:
-        "Struktur kepengurusan Pro Prabowo Subianto (PROPAS) Indonesia Dewan Pimpinan Daerah (DPD) Provinsi Sumatera Utara terbentuk secara musyawarah dan mufakat. Jimmi Simanjuntak terpilih menjadi pucuk pimpinan DPD Sumut, Jumat (24/11/2023).",
     },
   ];
   return (
