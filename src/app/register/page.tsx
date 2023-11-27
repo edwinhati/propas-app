@@ -5,12 +5,14 @@ import PersonalInformation from "@/components/PersonalInformation";
 import AddressInformation from "@/components/AddressInformation";
 import AccountInformation from "@/components/AccountInformation";
 import FormSubmission from "@/components/FormSubmission";
+import PopUp from "@/components/PopUp";
 
 export default function RegisterPage() {
   const [file, setFile] = useState<File>();
   const [loading, setLoading] = useState(false);
   const [id, setId] = useState("");
   const [isError, setIsError] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [formData, setFormData] = useState({
     nik: "",
     fullName: "",
@@ -63,7 +65,6 @@ export default function RegisterPage() {
       if (memberResponse.status === 201) {
         const memberId = memberResponse.data.id;
         setId(memberId);
-        console.log("input member berhasil");
         try {
           const data = new FormData();
           if (file) {
@@ -77,14 +78,17 @@ export default function RegisterPage() {
               "Content-Type": "multipart/form-data",
             },
           });
-          console.log(uploadResponse);
+          if (uploadResponse.status === 201) {
+            setIsSuccess(true);
+            setLoading(false);
+            window.scrollTo(0, 0);
+          }
         } catch (uploadError) {
           console.error("Error uploading file:", uploadError);
         }
       }
     } catch (memberError) {
       console.error("Error creating member:", memberError);
-      console.log("input member gagal");
       handleSubmissionError();
     } finally {
       setLoading(false);
@@ -122,6 +126,7 @@ export default function RegisterPage() {
           </div>
         </div>
       </main>
+      <PopUp isOpen={isSuccess} id={id} />
     </Fragment>
   );
 }
