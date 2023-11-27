@@ -6,13 +6,13 @@ export default function Footer() {
       <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <Image
+            {/* <Image
               src="/logo.jpeg"
               className="mr-3 mb-3"
               alt="PROPAS Indonesia Logo"
               width={80}
               height={80}
-            />
+            /> */}
             <span className="self-center text-2xl font-semibold whitespace-nowrap">
               PROPAS INDONESIA
             </span>
@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="">
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
-                ALAMAT
+                Sekretariat PROPAS INDONESIA
               </h2>
               <address className="text-gray-600">
                 <p className="mb-4">
