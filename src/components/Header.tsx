@@ -31,12 +31,13 @@ export default function Header() {
           </Link>
           <div className="flex items-center lg:order-2">
             {!profile ? (
-              <>
+                        <div className="space-x-2">
+
                 <Link
                   href="/login"
                   className="text-gray-800"
                 >
-                  Log in
+                  Masuk
                 </Link>
                 <Link
                   href="/register"
@@ -44,7 +45,7 @@ export default function Header() {
                 >
                   Daftar
                 </Link>
-              </>
+              </div>
             ) : null}{" "}
             <button
               data-collapse-toggle="mobile-menu-2"
