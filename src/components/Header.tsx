@@ -18,7 +18,7 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <Image src="/logo.jpeg" alt="Propas Logo" width={40} height={40} />
             <span className="ml-2 self-center text-xl font-semibold whitespace-nowrap ">
-              PROPAS
+              PROPAS {user ? <span className="text-red-700">INDONESIA</span> : ""}
             </span>
           </Link>
           <div className="flex items-center lg:order-2">
