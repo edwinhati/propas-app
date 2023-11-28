@@ -26,17 +26,26 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <Image src="/logo.jpeg" alt="Propas Logo" width={40} height={40} />
             <span className="ml-2 self-center text-xl font-semibold whitespace-nowrap ">
-              {profile ? "PROPAS INDONESIA" : ""}
+              PROPAS
             </span>
           </Link>
           <div className="flex items-center lg:order-2">
-            {!profile ? (
-                        <div className="space-x-2">
-
-                <Link
-                  href="/login"
-                  className="text-gray-800"
+            {profile ? (
+              <Link
+                href="/profile"
+                className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
                 >
+                  <path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z" />
+                </svg>
+              </Link>
+            ) : (
+              <div className="space-x-2">
+                <Link href="/login" className="text-gray-800 text-sm">
                   Masuk
                 </Link>
                 <Link
@@ -46,7 +55,7 @@ export default function Header() {
                   Daftar
                 </Link>
               </div>
-            ) : null}{" "}
+            )}
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
@@ -75,7 +84,7 @@ export default function Header() {
               )}
             </button>
           </div>
-          <div  
+          <div
             className={`${
               !isMenuOpen && "hidden"
             } justify-between items-center w-full lg:flex lg:w-auto lg:order-1`}
@@ -96,7 +105,7 @@ export default function Header() {
                   href="#"
                   className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0"
                 >
-                  Profil
+                  Organisasi
                 </Link>
               </li>
               <li>
@@ -104,7 +113,7 @@ export default function Header() {
                   href="/#news"
                   className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0"
                 >
-                  Berita & Artikel
+                  Berita
                 </Link>
               </li>
 
