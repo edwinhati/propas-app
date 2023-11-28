@@ -1,27 +1,16 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getCurrentUser } from "@/config";
 import { useUser } from "@/context";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [profile, setProfile] = useState(null);
   const { user } = useUser();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  useEffect(() => {
-    const getProfileData = async () => {
-      const profileData = await getCurrentUser();
-      setProfile(profileData);
-    };
-    getProfileData();
-  }, []);
-  console.log(user);
-  
   return (
     <header>
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 ">
@@ -33,7 +22,7 @@ export default function Header() {
             </span>
           </Link>
           <div className="flex items-center lg:order-2">
-            {profile ? (
+            {user ? (
               <Link
                 href="/profile"
                 className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2"

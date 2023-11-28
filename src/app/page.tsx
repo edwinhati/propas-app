@@ -1,22 +1,28 @@
-"use client"
+"use client";
 import { Fragment } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Carousel from "@/components/Carousel";
 import News from "@/components/News";
 import Hero from "@/components/Hero";
-import { UserProvider } from "@/context";
+import { useUser } from "@/context";
+import Loading from "@/components/Loading";
 
 export default function Home() {
+  const { loading } = useUser();
   return (
     <Fragment>
-      <UserProvider>
-        <Header />
-        <Carousel />
-        <Hero />
-        <News />
-        <Footer />
-      </UserProvider>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <Header />
+          <Carousel />
+          <Hero />
+          <News />
+          <Footer />
+        </>
+      )}
     </Fragment>
   );
 }
