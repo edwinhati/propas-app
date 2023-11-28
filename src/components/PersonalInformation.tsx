@@ -15,7 +15,7 @@ export default function PersonalInformation({
           NIK<span className="text-red-500">*</span>
         </label>
         <input
-          type="text"
+          type="number"
           id="nik"
           placeholder="Nomor Induk Kependudukan"
           required

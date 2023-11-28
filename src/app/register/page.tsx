@@ -8,6 +8,8 @@ import FormSubmission from "@/components/FormSubmission";
 import PopUp from "@/components/PopUp";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FormInfo from "@/components/FormInfo";
+import FormDanger from "@/components/FormDanger";
 
 export default function RegisterPage() {
   const [file, setFile] = useState<File>();
@@ -108,7 +110,8 @@ export default function RegisterPage() {
       <main className="sm:py-8 bg-white mb-6">
         <div className="container mx-auto">
           <div className="mx-auto bg-white p-6 rounded-lg shadow-xl">
-            <div className="bg-gray-100 p-4 rounded-lg shadow-md -mt-5 md:-mt-10">
+            {isError ? <FormDanger /> : <FormInfo />}
+            <div className="bg-gray-100 p-4 rounded-lg shadow-md">
               <form onSubmit={handleSubmit}>
                 <PersonalInformation
                   formData={formData}
@@ -130,7 +133,7 @@ export default function RegisterPage() {
         </div>
       </main>
       <PopUp isOpen={isSuccess} id={id} />
-      <Footer />  
+      <Footer />
     </Fragment>
   );
 }
