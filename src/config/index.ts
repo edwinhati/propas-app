@@ -27,7 +27,7 @@ export const signIn = async (username: string, password: string) => {
   api.defaults.headers.common["Authorization"] = `Bearer ${data.access_token}`;
 };
 
-export const getProfile = async () => {
+export const getCurrentUser = async () => {
   const { data } = await api.get("/auth/profile");
   return data;
 };

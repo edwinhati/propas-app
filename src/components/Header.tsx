@@ -2,23 +2,26 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getProfile } from "@/config";
+import { getCurrentUser } from "@/config";
+import { useUser } from "@/context";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [profile, setProfile] = useState(null);
+  const { user } = useUser();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
     const getProfileData = async () => {
-      const profileData = await getProfile();
+      const profileData = await getCurrentUser();
       setProfile(profileData);
     };
     getProfileData();
   }, []);
-
+  console.log(user);
+  
   return (
     <header>
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 ">
