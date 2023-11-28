@@ -18,18 +18,32 @@ export const signIn = async (username: string, password: string) => {
     password,
   });
 
-    cookie.set("access_token", data.access_token, {
-        path: "/",
-        maxAge: data.expires_in,
-        secure: process.env.NODE_ENV === "production",
-    });
+  cookie.set("access_token", data.access_token, {
+    path: "/",
+    maxAge: data.expires_in,
+    secure: process.env.NODE_ENV === "production",
+  });
 
   api.defaults.headers.common["Authorization"] = `Bearer ${data.access_token}`;
 };
 
 export const getCurrentUser = async () => {
-  const { data } = await api.get("/auth/profile");
-  return data;
+  try {
+    const { data } = await api.get("/auth/profile", {
+      validateStatus: (status) => status !== 401,
+    });
+    return data;
+  } catch (error) {
+    api.interceptors.response.use(
+      (response) => response,
+      (error) => {
+        if (error.response.status === 401) {
+          window.location.href = "/login";
+        }
+        return Promise.reject(error);
+      }
+    );
+  }
 };
 
 export const accessToken = () => {

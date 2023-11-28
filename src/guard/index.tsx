@@ -1,6 +1,6 @@
-import { useUser } from "@/context";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useUser } from "@/context";
 
 export default function Protected({ children }: any) {
   const { user, loading } = useUser();

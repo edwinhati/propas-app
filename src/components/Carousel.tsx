@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Carousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = ["/carousel1.jpeg", "/carousel2.jpeg", "/carousel3.jpeg"];
+  const images = ["/carousel2.jpeg", "/carousel3.jpeg"];
 
   useEffect(() => {
     const changeImage = () => {
@@ -13,8 +13,8 @@ export default function Carousel() {
 
     const interval = setInterval(changeImage, 5000);
     return () => clearInterval(interval);
-    
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
