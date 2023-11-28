@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import { Fragment } from "react";
 import { useUser } from "@/context";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Loading from "@/components/Loading";
 import Protected from "@/guard";
+import MemberCard from "@/components/MemberCard";
 
 type UseUserResult = {
   user: any;
@@ -36,7 +37,7 @@ export default function Profile() {
   const renderProfileContent = () => (
     <Fragment>
       <Header />
-      <main className="container mx-auto">
+      <main className="container mx-auto border p-4 rounded-lg">
         <div>
           <div className="px-4 sm:px-0">
             <h3 className="text-base font-semibold leading-7 text-gray-900">
@@ -61,10 +62,17 @@ export default function Profile() {
                   </dd>
                 </div>
               ))}
+              <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt className="text-sm font-medium leading-6 text-gray-900">
+                  Kartu Anggota
+                </dt>
+                <div className="mt-4 sm:mt-0">
+                  <MemberCard user={user} />
+                </div>
+              </div>
             </dl>
           </div>
         </div>{" "}
-        
       </main>
       <Footer />
     </Fragment>
