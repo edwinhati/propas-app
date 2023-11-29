@@ -34,15 +34,7 @@ export const getCurrentUser = async () => {
     });
     return data;
   } catch (error) {
-    api.interceptors.response.use(
-      (response) => response,
-      (error) => {
-        if (error.response.status === 401) {
-          window.location.href = "/login";
-        }
-        return Promise.reject(error);
-      }
-    );
+    return null;
   }
 };
 
