@@ -31,8 +31,18 @@ const userField = [
   },
 ];
 
+function generateMemberId(id: number) {
+  const idString = id.toString();
+  const prefix = "PROPAS0000000";
+  return prefix.substring(0, prefix.length - idString.length) + idString;
+}
+
 export default function Profile() {
   const { user, loading }: UseUserResult = useUser();
+
+  if (user) {
+    user.id = generateMemberId(user.id);
+  }
 
   const renderProfileContent = () => (
     <Fragment>
