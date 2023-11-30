@@ -33,10 +33,10 @@ export default function Hero() {
         </h1>
         <div className="item-body mb-8 text-xs text-justify font-ligt text-gray-500 lg:text-sm sm:px-16 xl:px-48">
           <Image
-            src="/Prabowo.jpeg"
+            src="/Ketum.jpg"
             width={200}
             height={200}
-            alt="Prabowo Subianto"
+            alt="Ketua Umum"
             className="rounded-sm mr-2 float-left"
           />
           <p>
@@ -85,8 +85,8 @@ export default function Hero() {
             <br />
             <br />
             Salam Hormat <br />
-            Calon Presiden RI <br />
-            PRABOWO SUBIANTO
+            Brigjen TNI (Purn) Drs. Sindu Tikno Seputro, M.Si.(Han) <br />
+            Ketua Umum PROPAS INDONESIA<br />
           </p>
         </div>
         {/* </div> */}

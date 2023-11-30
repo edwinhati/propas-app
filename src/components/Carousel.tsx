@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Carousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = ["/carousel2.jpeg", "/carousel3.jpeg"];
+  const images = ["/carousel.jpeg"];
 
   useEffect(() => {
     const changeImage = () => {
@@ -36,8 +36,8 @@ export default function Carousel() {
               src={image}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
-              width={400}
-              height={400}
+              width={1000}
+              height={1000}
             />
           </div>
         ))}
