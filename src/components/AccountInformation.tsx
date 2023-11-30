@@ -4,7 +4,7 @@ export default function AccountInformation({
   formData,
   handleInputChange,
 }: any) {
-  const [isCreateAccount, setIsCreateAccount] = useState(false);
+  const [isCreateAccount, setIsCreateAccount] = useState(true);
 
   return (
     <Fragment>
@@ -43,7 +43,7 @@ export default function AccountInformation({
           required={isCreateAccount}
         />
       </div>
-      <div className="mb-6 flex items-center">
+      {/* <div className="mb-6 flex items-center">
         <input
           id="makeaccount"
           type="checkbox"
@@ -56,7 +56,7 @@ export default function AccountInformation({
         >
           Buat akun
         </label>
-      </div>
+      </div> */}
 
       {isCreateAccount && (
         <div className="mb-6">
