@@ -117,6 +117,7 @@ export default function PersonalInformation({
           </label>
         </div>
       </fieldset>
+
       <fieldset className="mb-6">
         <legend className="sr-only">Married</legend>
         <label

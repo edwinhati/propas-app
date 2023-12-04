@@ -27,8 +27,8 @@ export default function Stepper({ currentStep }: any) {
     >
       <path
         stroke="currentColor"
-        stroke-Linecap="round"
-        stroke-Linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         strokeWidth="2"
         d="m7 9 4-4-4-4M1 9l4-4-4-4"
       />
