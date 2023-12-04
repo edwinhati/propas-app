@@ -457,7 +457,6 @@ export default function Organization() {
       {/* End of New Section */}
 
       <Footer />
-      <Footer />
     </Fragment>
   );
 }
