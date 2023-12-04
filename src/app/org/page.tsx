@@ -61,7 +61,7 @@ export default function Organization() {
           </div>
         </div>
       </section>
-      <div className="container mx-auto my-8 shadow">
+      {/* <div className="container mx-auto my-8 shadow">
         <h4 className="text-center text-2xl font-semibold mb-4">
           Struktur Organisasi Kepengurusan DPP PROPAS INDONESIA
         </h4>
@@ -453,7 +453,7 @@ export default function Organization() {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
       {/* End of New Section */}
 
       <Footer />
