@@ -91,6 +91,7 @@ export default function PersonalInformation({
             name="gender"
             className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-red-300 "
             checked={formData.gender === "M"}
+            value="M"
             onChange={handleRadioChange}
           />
           <label
@@ -107,6 +108,7 @@ export default function PersonalInformation({
             name="gender"
             className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-red-300 "
             checked={formData.gender === "F"}
+            value="F"
             onChange={handleRadioChange}
           />
           <label
