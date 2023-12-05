@@ -3,6 +3,22 @@ import Link from "next/link";
 export default function News() {
   const news = [
     {
+      title:
+        "Propas Indonesia DPC Kabupaten Tuban Jawa Timur, Siap Berjuang Untuk Prabowo-Gibran Satu Putaran",
+      link: "https://www.memoterkini.com/berita/9489/propas-indonesia-dpc-kabupaten-tuban-jawa-timur-siap-berjuang-untuk-prabowo-gibran-satu-putaran",
+      date: "Senin, 4 Desember 2023",
+      content:
+        "Tuban,memoterkini – Acara Pembukaan Konsulidasi DPC Kabupaten Tuban, Tim Relawan Pemenang Prabowo – Gibran Propas Ronggolawe yang dilaksanakan di Cafe Desa Prataan, Kec Parengan, Kab Tuban, Sabtu (02/12/23) Malam.",
+    },
+    {
+      title:
+        "Perlebar Sayap Propas Indonesia , Ketua Bidang Sosialisasi dan Pemenangan Pemilu Sugirno Adakan Sosialisasi Pembentukan Jaringan Propas Sampai Ke Desa – Desa ",
+      link: "https://www.berandaclik.com/perlebar-sayap-propas-indonesia-ketua-bidang-sosialisasi-dan-pemenangan-pemilu-sugirno-adakan-sosialisasi-pembentukan-jaringan-propas-sampai-ke-desa-desa/",
+      date: "Jumat, 1 Desember 2023",
+      content:
+        "Riau – Guna meneruskan arahan dari Ketua DPD Propas Riau dalam program pelebaran sayap Propas Indonesia sampai ke seluruh pelosok desa , Jum’ at , 1 Desember 2023 Ketua Bidang Sosialisasi dan Pemenangan Pemilu DPD Propas Riau agendakan giat sosialisasi di tengah Masyarakat.",
+    },
+    {
       title: "DPD PROPAS Sumut Siap Menangkan Prabowo – Gibran Satu Putaran",
       link: "https://orbitdigitaldaily.com/dpd-propas-sumut-siap-menangkan-prabowo-gibran-satu-putaran/",
       date: "Sabtu, 25 November 2023",
