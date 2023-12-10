@@ -4,6 +4,14 @@ export default function News() {
   const news = [
     {
       title:
+        "Lakukan Kunker , Ketua DPD Propas Riau Bersama Jajaran Kali Ini Datangi Kantor DPC Propas Kota Selat Panjang",
+      link: "https://www.berandaclik.com/lakukan-kunker-ketua-dpd-propas-riau-bersama-jajaran-kali-ini-datangi-kantor-dpc-propas-kota-selat-panjang/",
+      date: "Senin, 4 Desember 2023",
+      content:
+        "Selat Panjang – Terus lakukan upaya pengembangan struktur Propas Indonesia sampai ke pelosok desa , Kali Ini Ketua DPD Propas Riau Muhammad Yuslizal bersama rombongan kunjungi Kantor DPC Propas Selat Panjang yang beralamat di Jalan tebing tinggi no.08, kelurahan kota Selat Panjang Kabupaten Meranti Provinsi Riau.",
+    },
+    {
+      title:
         "Propas Indonesia DPC Kabupaten Tuban Jawa Timur, Siap Berjuang Untuk Prabowo-Gibran Satu Putaran",
       link: "https://www.memoterkini.com/berita/9489/propas-indonesia-dpc-kabupaten-tuban-jawa-timur-siap-berjuang-untuk-prabowo-gibran-satu-putaran",
       date: "Senin, 4 Desember 2023",
