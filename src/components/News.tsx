@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function News() {
   const news = [
@@ -55,6 +56,38 @@ export default function News() {
           </p> */}
         </div>
         <div className="grid gap-8 lg:grid-cols-2">
+          <Image
+            src={`/poster.jpeg`}
+            width={500}
+            height={300}
+            alt=""
+            className="object-cover rounded-lg"
+          />
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/KjfjdrYWJYo?si=XMQkJsS2A3tl49VG"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+          <video className="w-full" controls>
+            <source src="/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          {[1, 2, 3, 4, 5, 6].map((item, index) => (
+            <Image
+              key={index}
+              src={`/sertifikasi/${item}.jpeg`}
+              width={500}
+              height={300}
+              alt=""
+              className="object-cover rounded-lg"
+            />
+          ))}
+
           {news.map((item, index) => (
             <article
               className="p-6 bg-white rounded-lg border border-gray-200 shadow-md"
@@ -84,7 +117,6 @@ export default function News() {
               </h2>
               <p className="mb-5 font-light text-gray-500">{item.content}</p>
               <div className="flex justify-between items-center">
-                
                 <Link
                   href={item.link}
                   target="_blank"

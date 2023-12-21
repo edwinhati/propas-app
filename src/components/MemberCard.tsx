@@ -4,8 +4,12 @@ import Image from "next/image";
 export default function MemberCard({ user }: any) {
   return (
     <Fragment>
-      <div className="w-96 h-56 m-auto bg-red-900 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110">
-        <div className="w-full flex items-left ml-5 py-4 space-x-2">
+      <div className="w-96 h-56 m-auto bg-[#0cc1e0] rounded-xl relative text-black shadow-2xl transition-transform transform hover:scale-110">
+        <div className="w-full flex items-center justify-center ml-5 py-2 space-x-2">
+          <div className="flex flex-col">
+            <p className="text-center">Kartu Anggota</p>
+            <p className="text-center">PROPAS INDONESIA</p>
+          </div>
           <Image
             className="w-12 h-12 rounded-full"
             src="/logo.jpeg"
@@ -13,10 +17,8 @@ export default function MemberCard({ user }: any) {
             width={500}
             height={500}
           />
-          <p>
-            Kartu Anggota <br /> PROPAS INDONESIA
-          </p>
         </div>
+        <hr className="w-full h-1 bg-red-500 border-0 rounded" />
         <div className="w-full px-8 mt-12 absolute top-8">
           <div className="flex justify-between">
             <div className="">
