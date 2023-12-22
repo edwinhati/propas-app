@@ -23,7 +23,7 @@ export default function Carousel() {
       className="relative w-full"
       data-carousel="static"
     >
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div className="relative h-56 overflow-hidden rounded-lg md:h-screen">
         {images.map((image, index) => (
           <div
             key={index}
